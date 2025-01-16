@@ -1,4 +1,4 @@
-const cacheName = "Kalielso-Catalogo3Dmak-0.1";
+const cacheName = "Kalielso-Catalogo3Dmak-0.2";
 const contentToCache = [
     "Build/AppRaxaBiofit.loader.js",
     "Build/AppRaxaBiofit.framework.js.unityweb",
