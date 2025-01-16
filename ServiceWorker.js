@@ -10,6 +10,7 @@ const contentToCache = [
 
 self.addEventListener('install', function (e) {
     console.log('[Service Worker] Install');
+    self.skipWaiting();
     
     e.waitUntil((async function () {
       const cache = await caches.open(cacheName);
