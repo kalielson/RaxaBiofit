@@ -10,7 +10,6 @@ const contentToCache = [
 
 self.addEventListener('install', function (e) {
     console.log('[Service Worker] Install');
-    self.skipWaiting();
     
     e.waitUntil((async function () {
       const cache = await caches.open(cacheName);
@@ -31,30 +30,4 @@ self.addEventListener('fetch', function (e) {
       cache.put(e.request, response.clone());
       return response;
     })());
-});
-
-self.addEventListener('install', (event) => {
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          return caches.delete(cacheName);
-        })
-      );
-    })
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    fetch(event.request).then((response) => {
-      return response;
-    }).catch(() => {
-      return caches.match(event.request);
-    })
-  );
 });
