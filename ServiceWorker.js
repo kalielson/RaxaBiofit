@@ -1,9 +1,9 @@
 const cacheName = "Kalielso-Catalogo3Dmak-0.1";
 const contentToCache = [
-    "Build/AppRaxaBiofit.loader.js" + new Date().getTime(),
-    "Build/AppRaxaBiofit.framework.js.unityweb" + new Date().getTime(),
-    "Build/AppRaxaBiofit.data.unityweb" + new Date().getTime(),
-    "Build/AppRaxaBiofit.wasm.unityweb" + new Date().getTime(),
+    "Build/AppRaxaBiofit.loader.js",
+    "Build/AppRaxaBiofit.framework.js.unityweb",
+    "Build/AppRaxaBiofit.data.unityweb",
+    "Build/AppRaxaBiofit.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
