@@ -56,13 +56,13 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build/";
-      var loaderUrl = buildUrl + "AppRaxaBiofit.loader.js";
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/AppRaxaBiofit.loader.js" + new Date().getTime();
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "AppRaxaBiofit.data.unityweb" + new Date().getTime(),
-        frameworkUrl: buildUrl + "AppRaxaBiofit.framework.js.unityweb" + new Date().getTime(),
-        codeUrl: buildUrl + "AppRaxaBiofit.wasm.unityweb" + new Date().getTime(),
+        dataUrl: buildUrl + "/AppRaxaBiofit.data.unityweb" + new Date().getTime(),
+        frameworkUrl: buildUrl + "/AppRaxaBiofit.framework.js.unityweb" + new Date().getTime(),
+        codeUrl: buildUrl + "/AppRaxaBiofit.wasm.unityweb" + new Date().getTime(),
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Kalielso",
         productName: "Catalogo3Dmak",
